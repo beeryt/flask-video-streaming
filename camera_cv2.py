@@ -1,7 +1,8 @@
 import time
 import io
 import threading
-import picamera
+import cv2
+import numpy as np
 
 
 class Camera(object):
@@ -27,6 +28,7 @@ class Camera(object):
     @classmethod
     def _thread(cls):
         # camera setup
+        camera = cv2.VideoCapture(1)
         # let camera warm up
         # store frames
         while (camera.isOpened()):

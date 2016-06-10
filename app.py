@@ -2,7 +2,7 @@
 from flask import Flask, render_template, Response
 
 # emulated camera
-from camera import Camera
+from camera_cv2 import Camera
 
 # Raspberry Pi camera module (requires picamera package)
 # from camera_pi import Camera
